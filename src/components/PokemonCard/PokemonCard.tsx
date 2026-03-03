@@ -1,18 +1,8 @@
 import type { PokemonListItem } from '../../types/pokemon'
+import { getPokemonId, getSpriteUrl } from '../../utils/helper'
 
 interface PokemonCardProps {
   pokemon: PokemonListItem
-}
-
-// Extract Pokemon ID from URL
-const getPokemonId = (url: string): number => {
-  const parts = url.split('/')
-  return parseInt(parts[parts.length - 2], 10)
-}
-
-// Get sprite URL from Pokemon ID
-const getSpriteUrl = (id: number): string => {
-  return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`
 }
 
 export function PokemonCard({ pokemon }: PokemonCardProps) {

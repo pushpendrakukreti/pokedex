@@ -30,7 +30,7 @@ export function PokemonList() {
 
   if (isLoading) {
     return (
-      <div className="flex justify-center items-center min-h-[200px]">
+      <div className="flex justify-center items-center min-h-50">
         <p className="text-lg text-gray-600">Loading...</p>
       </div>
     )
@@ -38,7 +38,7 @@ export function PokemonList() {
 
   if (isError) {
     return (
-      <div className="flex justify-center items-center min-h-[200px]">
+      <div className="flex justify-center items-center min-h-50">
         <p className="text-lg text-red-600">
           Error: {error instanceof Error ? error.message : 'Failed to load Pokemon'}
         </p>

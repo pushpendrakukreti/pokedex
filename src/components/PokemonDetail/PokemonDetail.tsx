@@ -2,36 +2,7 @@ import { useParams, Link } from 'react-router-dom'
 import { useQuery } from '@tanstack/react-query'
 import { pokemonApi } from '../../services/pokemonApi'
 import type { PokemonDetail as PokemonDetailType } from '../../types/pokemon'
-
-const typeColors: Record<string, string> = {
-  normal: 'bg-gray-400',
-  fire: 'bg-red-500',
-  water: 'bg-blue-500',
-  electric: 'bg-yellow-400',
-  grass: 'bg-green-500',
-  ice: 'bg-blue-200',
-  fighting: 'bg-red-700',
-  poison: 'bg-purple-500',
-  ground: 'bg-yellow-600',
-  flying: 'bg-indigo-400',
-  psychic: 'bg-pink-500',
-  bug: 'bg-green-400',
-  rock: 'bg-yellow-700',
-  ghost: 'bg-purple-700',
-  dragon: 'bg-indigo-600',
-  dark: 'bg-gray-700',
-  steel: 'bg-gray-500',
-  fairy: 'bg-pink-300',
-}
-
-const statNames: Record<string, string> = {
-  hp: 'HP',
-  attack: 'Attack',
-  defense: 'Defense',
-  'special-attack': 'Sp. Atk',
-  'special-defense': 'Sp. Def',
-  speed: 'Speed',
-}
+import { typeColors, statNames } from '../../utils/helper'
 
 export function PokemonDetail() {
   const { nameOrId } = useParams<{ nameOrId: string }>()
@@ -108,7 +79,7 @@ export function PokemonDetail() {
         <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
           <div className="md:flex">
             {/* Image Section */}
-            <div className="md:w-1/2 bg-gradient-to-br from-gray-100 to-gray-200 p-8 flex items-center justify-center">
+            <div className="md:w-1/2 bg-linear-to-br from-gray-100 to-gray-200 p-8 flex items-center justify-center">
               {imageUrl && (
                 <img
                   src={imageUrl}
