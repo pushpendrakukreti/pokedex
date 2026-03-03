@@ -124,7 +124,7 @@ describe('PokemonList', () => {
     await user.type(searchInput, 'xyz123notfound')
 
     await waitFor(() => {
-      expect(screen.getByText(/no pokemon found/i)).toBeInTheDocument()
+      expect(screen.getByText(/No Pokémon found/i)).toBeInTheDocument()
     })
   })
 })
