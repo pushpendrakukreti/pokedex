@@ -46,8 +46,8 @@ A modern web application for browsing and exploring Pokémon data, built with Re
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/pokemon-app.git
-   cd pokemon-app
+   git clone https://github.com/pushpendrakukreti/pokedex.git
+   cd pokedex
    ```
 
 2. Install dependencies:
@@ -262,12 +262,8 @@ This project leveraged AI assistance for:
 ### Rationale
 AI assistance was used to accelerate development while maintaining code quality. All AI-generated code was reviewed, tested, and modified as needed to meet project requirements.
 
-## 📝 License
-
-MIT License - see [LICENSE](LICENSE) for details.
-
 ## 👤 Author
 
 **Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your Profile](https://linkedin.com/in/yourprofile)
+- GitHub: [@pushpendrakukreti](https://github.com/pushpendrakukreti)
+- LinkedIn: [Your Profile](https://linkedin.com/in/pkukreti)
