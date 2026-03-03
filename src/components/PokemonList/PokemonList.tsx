@@ -8,12 +8,7 @@ import { PokemonCard } from '../PokemonCard/PokemonCard'
 export function PokemonList() {
   const [searchTerm, setSearchTerm] = useState('')
 
-  const {
-    data,
-    isLoading,
-    isError,
-    error,
-  } = useQuery({
+  const { data, isLoading, isError, error } = useQuery({
     queryKey: ['pokemon', 'list'],
     queryFn: () => pokemonApi.getList(20, 0),
   })
@@ -67,11 +62,7 @@ export function PokemonList() {
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
           {filteredPokemon.map((pokemon: PokemonListItem) => (
-            <Link
-              key={pokemon.name}
-              to={`/pokemon/${pokemon.name}`}
-              className="no-underline"
-            >
+            <Link key={pokemon.name} to={`/pokemon/${pokemon.name}`} className="no-underline">
               <PokemonCard pokemon={pokemon} />
             </Link>
           ))}

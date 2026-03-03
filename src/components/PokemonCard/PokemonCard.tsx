@@ -19,12 +19,8 @@ export function PokemonCard({ pokemon }: PokemonCardProps) {
           loading="lazy"
         />
       </div>
-      <p className="text-center text-lg font-semibold capitalize text-gray-800">
-        {pokemon.name}
-      </p>
-      <p className="text-center text-sm text-gray-500">
-        #{pokemonId.toString().padStart(3, '0')}
-      </p>
+      <p className="text-center text-lg font-semibold capitalize text-gray-800">{pokemon.name}</p>
+      <p className="text-center text-sm text-gray-500">#{pokemonId.toString().padStart(3, '0')}</p>
     </div>
   )
 }

@@ -50,22 +50,13 @@ export function PokemonDetail() {
   }
 
   const imageUrl =
-    pokemon.sprites.other?.['official-artwork']?.front_default ||
-    pokemon.sprites.front_default
+    pokemon.sprites.other?.['official-artwork']?.front_default || pokemon.sprites.front_default
 
   return (
     <div className="min-h-screen bg-gray-50 py-8">
       <div className="container mx-auto px-4">
-        <Link
-          to="/"
-          className="inline-flex items-center text-blue-500 hover:text-blue-700 mb-6"
-        >
-          <svg
-            className="w-5 h-5 mr-2"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
+        <Link to="/" className="inline-flex items-center text-blue-500 hover:text-blue-700 mb-6">
+          <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -81,20 +72,14 @@ export function PokemonDetail() {
             {/* Image Section */}
             <div className="md:w-1/2 bg-linear-to-br from-gray-100 to-gray-200 p-8 flex items-center justify-center">
               {imageUrl && (
-                <img
-                  src={imageUrl}
-                  alt={pokemon.name}
-                  className="w-64 h-64 object-contain"
-                />
+                <img src={imageUrl} alt={pokemon.name} className="w-64 h-64 object-contain" />
               )}
             </div>
 
             {/* Details Section */}
             <div className="md:w-1/2 p-8">
               <div className="flex items-center justify-between mb-4">
-                <h1 className="text-3xl font-bold capitalize text-gray-800">
-                  {pokemon.name}
-                </h1>
+                <h1 className="text-3xl font-bold capitalize text-gray-800">{pokemon.name}</h1>
                 <span className="text-xl text-gray-500">
                   #{pokemon.id.toString().padStart(3, '0')}
                 </span>
@@ -144,9 +129,7 @@ export function PokemonDetail() {
                       }`}
                     >
                       {ability.ability.name.replace('-', ' ')}
-                      {ability.is_hidden && (
-                        <span className="text-xs ml-1">(Hidden)</span>
-                      )}
+                      {ability.is_hidden && <span className="text-xs ml-1">(Hidden)</span>}
                     </span>
                   ))}
                 </div>

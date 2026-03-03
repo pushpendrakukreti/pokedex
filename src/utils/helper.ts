@@ -19,7 +19,7 @@ export const typeColors: Record<string, string> = {
   dark: 'bg-gray-700',
   steel: 'bg-gray-500',
   fairy: 'bg-pink-300',
-};
+}
 
 export const statNames: Record<string, string> = {
   hp: 'HP',
@@ -28,13 +28,13 @@ export const statNames: Record<string, string> = {
   'special-attack': 'Sp. Atk',
   'special-defense': 'Sp. Def',
   speed: 'Speed',
-};
+}
 
 export const getPokemonId = (url: string): number => {
-  const parts = url.split('/');
-  return parseInt(parts[parts.length - 2], 10);
-};
+  const parts = url.split('/')
+  return parseInt(parts[parts.length - 2], 10)
+}
 
 export const getSpriteUrl = (id: number): string => {
-  return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
-};
+  return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`
+}

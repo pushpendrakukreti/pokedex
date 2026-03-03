@@ -30,7 +30,8 @@ export const mockPokemonDetail = {
     front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png',
     other: {
       'official-artwork': {
-        front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png',
+        front_default:
+          'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png',
       },
     },
   },
@@ -39,15 +40,39 @@ export const mockPokemonDetail = {
     { slot: 2, type: { name: 'poison', url: 'https://pokeapi.co/api/v2/type/4/' } },
   ],
   abilities: [
-    { ability: { name: 'overgrow', url: 'https://pokeapi.co/api/v2/ability/65/' }, is_hidden: false, slot: 1 },
-    { ability: { name: 'chlorophyll', url: 'https://pokeapi.co/api/v2/ability/34/' }, is_hidden: true, slot: 3 },
+    {
+      ability: { name: 'overgrow', url: 'https://pokeapi.co/api/v2/ability/65/' },
+      is_hidden: false,
+      slot: 1,
+    },
+    {
+      ability: { name: 'chlorophyll', url: 'https://pokeapi.co/api/v2/ability/34/' },
+      is_hidden: true,
+      slot: 3,
+    },
   ],
   stats: [
     { base_stat: 45, effort: 0, stat: { name: 'hp', url: 'https://pokeapi.co/api/v2/stat/1/' } },
-    { base_stat: 49, effort: 0, stat: { name: 'attack', url: 'https://pokeapi.co/api/v2/stat/2/' } },
-    { base_stat: 49, effort: 0, stat: { name: 'defense', url: 'https://pokeapi.co/api/v2/stat/3/' } },
-    { base_stat: 65, effort: 1, stat: { name: 'special-attack', url: 'https://pokeapi.co/api/v2/stat/4/' } },
-    { base_stat: 65, effort: 0, stat: { name: 'special-defense', url: 'https://pokeapi.co/api/v2/stat/5/' } },
+    {
+      base_stat: 49,
+      effort: 0,
+      stat: { name: 'attack', url: 'https://pokeapi.co/api/v2/stat/2/' },
+    },
+    {
+      base_stat: 49,
+      effort: 0,
+      stat: { name: 'defense', url: 'https://pokeapi.co/api/v2/stat/3/' },
+    },
+    {
+      base_stat: 65,
+      effort: 1,
+      stat: { name: 'special-attack', url: 'https://pokeapi.co/api/v2/stat/4/' },
+    },
+    {
+      base_stat: 65,
+      effort: 0,
+      stat: { name: 'special-defense', url: 'https://pokeapi.co/api/v2/stat/5/' },
+    },
     { base_stat: 45, effort: 0, stat: { name: 'speed', url: 'https://pokeapi.co/api/v2/stat/6/' } },
   ],
 }
@@ -66,8 +91,12 @@ export const handlers = [
     }
     return HttpResponse.json({
       ...mockPokemonDetail,
-      id: typeof nameOrId === 'string' && !isNaN(Number(nameOrId)) ? Number(nameOrId) : mockPokemonDetail.id,
-      name: typeof nameOrId === 'string' && isNaN(Number(nameOrId)) ? nameOrId : mockPokemonDetail.name,
+      id:
+        typeof nameOrId === 'string' && !isNaN(Number(nameOrId))
+          ? Number(nameOrId)
+          : mockPokemonDetail.id,
+      name:
+        typeof nameOrId === 'string' && isNaN(Number(nameOrId)) ? nameOrId : mockPokemonDetail.name,
     })
   }),
 ]

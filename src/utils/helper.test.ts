@@ -5,9 +5,24 @@ describe('helper', () => {
   describe('typeColors', () => {
     it('contains all 18 Pokemon types', () => {
       const expectedTypes = [
-        'normal', 'fire', 'water', 'electric', 'grass', 'ice',
-        'fighting', 'poison', 'ground', 'flying', 'psychic', 'bug',
-        'rock', 'ghost', 'dragon', 'dark', 'steel', 'fairy'
+        'normal',
+        'fire',
+        'water',
+        'electric',
+        'grass',
+        'ice',
+        'fighting',
+        'poison',
+        'ground',
+        'flying',
+        'psychic',
+        'bug',
+        'rock',
+        'ghost',
+        'dragon',
+        'dark',
+        'steel',
+        'fairy',
       ]
       expectedTypes.forEach((type) => {
         expect(typeColors[type]).toBeDefined()
@@ -41,7 +56,14 @@ describe('helper', () => {
 
   describe('statNames', () => {
     it('contains all 6 base stats', () => {
-      const expectedStats = ['hp', 'attack', 'defense', 'special-attack', 'special-defense', 'speed']
+      const expectedStats = [
+        'hp',
+        'attack',
+        'defense',
+        'special-attack',
+        'special-defense',
+        'speed',
+      ]
       expectedStats.forEach((stat) => {
         expect(statNames[stat]).toBeDefined()
       })
@@ -104,22 +126,26 @@ describe('helper', () => {
 
   describe('getSpriteUrl', () => {
     it('returns correct sprite URL for Pokemon ID 1', () => {
-      const expected = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png'
+      const expected =
+        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png'
       expect(getSpriteUrl(1)).toBe(expected)
     })
 
     it('returns correct sprite URL for Pokemon ID 25', () => {
-      const expected = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png'
+      const expected =
+        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png'
       expect(getSpriteUrl(25)).toBe(expected)
     })
 
     it('returns correct sprite URL for Pokemon ID 150', () => {
-      const expected = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png'
+      const expected =
+        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/150.png'
       expect(getSpriteUrl(150)).toBe(expected)
     })
 
     it('returns correct sprite URL for high Pokemon ID', () => {
-      const expected = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1000.png'
+      const expected =
+        'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1000.png'
       expect(getSpriteUrl(1000)).toBe(expected)
     })
   })
