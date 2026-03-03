@@ -7,7 +7,7 @@ A modern web application for browsing and exploring Pokémon data, built with Re
 
 ## 🚀 Live Demo
 
-**[View Live Application](https://your-deployment-url.vercel.app)**
+**[View Live Application](https://pokedex-pk.vercel.app)**
 
 ## ✨ Features
 
