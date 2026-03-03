@@ -18,14 +18,15 @@ export function PokemonList() {
     queryFn: () => pokemonApi.getList(20, 0),
   })
 
+  const results = data?.results
   const filteredPokemon = useMemo(() => {
-    if (!data?.results) return []
-    if (!searchTerm.trim()) return data.results
+    if (!results) return []
+    if (!searchTerm.trim()) return results
 
-    return data.results.filter((pokemon: PokemonListItem) =>
+    return results.filter((pokemon: PokemonListItem) =>
       pokemon.name.toLowerCase().includes(searchTerm.toLowerCase())
     )
-  }, [data?.results, searchTerm])
+  }, [results, searchTerm])
 
   if (isLoading) {
     return (
