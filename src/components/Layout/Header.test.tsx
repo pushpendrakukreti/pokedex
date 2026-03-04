@@ -13,7 +13,7 @@ describe('Header', () => {
 
   it('should render the app name', () => {
     renderHeader()
-    expect(screen.getByText('Pokemon Explorer')).toBeInTheDocument()
+    expect(screen.getByText('Pokedex')).toBeInTheDocument()
   })
 
   it('should render the Home navigation link', () => {

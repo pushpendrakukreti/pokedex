@@ -13,7 +13,7 @@ describe('Button', () => {
     const user = userEvent.setup()
     const handleClick = vi.fn()
     render(<Button onClick={handleClick}>Click</Button>)
-    
+
     await user.click(screen.getByRole('button'))
     expect(handleClick).toHaveBeenCalledOnce()
   })
@@ -61,7 +61,10 @@ describe('Button', () => {
 
   it('should render left and right icons', () => {
     render(
-      <Button leftIcon={<span data-testid="left-icon">L</span>} rightIcon={<span data-testid="right-icon">R</span>}>
+      <Button
+        leftIcon={<span data-testid="left-icon">L</span>}
+        rightIcon={<span data-testid="right-icon">R</span>}
+      >
         With Icons
       </Button>
     )

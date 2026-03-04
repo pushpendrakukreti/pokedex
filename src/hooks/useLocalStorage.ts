@@ -21,15 +21,12 @@ export function useLocalStorage<T>(
   }, [key, storedValue])
 
   // Wrapper to update state and localStorage
-  const setValue = useCallback(
-    (value: T | ((prev: T) => T)) => {
-      setStoredValue((prev) => {
-        const newValue = value instanceof Function ? value(prev) : value
-        return newValue
-      })
-    },
-    []
-  )
+  const setValue = useCallback((value: T | ((prev: T) => T)) => {
+    setStoredValue((prev) => {
+      const newValue = value instanceof Function ? value(prev) : value
+      return newValue
+    })
+  }, [])
 
   // Function to remove the item from storage
   const removeValue = useCallback(() => {

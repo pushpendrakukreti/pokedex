@@ -30,10 +30,7 @@ function getSystemTheme(): 'light' | 'dark' {
 /**
  * ThemeProvider component that provides theme context to the app.
  */
-export function ThemeProvider({
-  children,
-  defaultTheme = Theme.SYSTEM,
-}: ThemeProviderProps) {
+export function ThemeProvider({ children, defaultTheme = Theme.SYSTEM }: ThemeProviderProps) {
   const [theme, setThemeState] = useState<Theme>(() => {
     const stored = getStorageItem<Theme>(STORAGE_KEYS.THEME)
     return stored || defaultTheme

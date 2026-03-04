@@ -13,7 +13,7 @@ export const authService = {
   login: async (credentials: LoginCredentials): Promise<{ user: User; tokens: AuthTokens }> => {
     // TODO: Replace with actual API call
     // const response = await apiClient.post('/auth/login', credentials)
-    
+
     // Mock implementation
     const mockUser: User = {
       id: '1',
@@ -36,10 +36,12 @@ export const authService = {
   /**
    * Register a new user.
    */
-  register: async (credentials: RegisterCredentials): Promise<{ user: User; tokens: AuthTokens }> => {
+  register: async (
+    credentials: RegisterCredentials
+  ): Promise<{ user: User; tokens: AuthTokens }> => {
     // TODO: Replace with actual API call
     // const response = await apiClient.post('/auth/register', credentials)
-    
+
     // Mock implementation
     const mockUser: User = {
       id: Date.now().toString(),
@@ -65,7 +67,7 @@ export const authService = {
   logout: async (): Promise<void> => {
     // TODO: Call logout endpoint if needed
     // await apiClient.post('/auth/logout')
-    
+
     removeStorageItem(STORAGE_KEYS.AUTH_TOKEN)
     removeStorageItem(STORAGE_KEYS.USER)
   },
@@ -75,14 +77,14 @@ export const authService = {
    */
   refreshToken: async (): Promise<AuthTokens> => {
     const refreshToken = getStorageItem<string>(STORAGE_KEYS.AUTH_TOKEN)
-    
+
     if (!refreshToken) {
       throw new Error('No refresh token available')
     }
 
     // TODO: Replace with actual API call
     // const response = await apiClient.post('/auth/refresh', { refreshToken })
-    
+
     // Mock implementation
     const mockTokens: AuthTokens = {
       accessToken: 'new-mock-access-token',

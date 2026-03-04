@@ -10,14 +10,14 @@ export const LoadingState = {
   SUCCESS: 'success',
   ERROR: 'error',
 } as const
-export type LoadingState = typeof LoadingState[keyof typeof LoadingState]
+export type LoadingState = (typeof LoadingState)[keyof typeof LoadingState]
 
 // Sort order constant and type
 export const SortOrder = {
   ASC: 'asc',
   DESC: 'desc',
 } as const
-export type SortOrder = typeof SortOrder[keyof typeof SortOrder]
+export type SortOrder = (typeof SortOrder)[keyof typeof SortOrder]
 
 // Sort field constant and type
 export const SortField = {
@@ -25,7 +25,7 @@ export const SortField = {
   ID: 'id',
   DATE: 'date',
 } as const
-export type SortField = typeof SortField[keyof typeof SortField]
+export type SortField = (typeof SortField)[keyof typeof SortField]
 
 // Notification type constant and type
 export const NotificationType = {
@@ -34,7 +34,7 @@ export const NotificationType = {
   WARNING: 'warning',
   INFO: 'info',
 } as const
-export type NotificationType = typeof NotificationType[keyof typeof NotificationType]
+export type NotificationType = (typeof NotificationType)[keyof typeof NotificationType]
 
 // Theme constant and type
 export const Theme = {
@@ -42,4 +42,4 @@ export const Theme = {
   DARK: 'dark',
   SYSTEM: 'system',
 } as const
-export type Theme = typeof Theme[keyof typeof Theme]
+export type Theme = (typeof Theme)[keyof typeof Theme]

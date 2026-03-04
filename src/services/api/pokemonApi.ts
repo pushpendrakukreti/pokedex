@@ -42,10 +42,8 @@ export const pokemonApi = {
   searchByName: async (query: string, limit = 20): Promise<PokemonListResponse> => {
     // Note: PokeAPI doesn't support search, so we fetch all and filter client-side
     // In a real app, you'd have a backend that supports search
-    const response = await apiClient.get<PokemonListResponse>(
-      `${API_ENDPOINTS.POKEMON}?limit=1000`
-    )
-    
+    const response = await apiClient.get<PokemonListResponse>(`${API_ENDPOINTS.POKEMON}?limit=1000`)
+
     const filteredResults = response.data.results.filter((pokemon) =>
       pokemon.name.toLowerCase().includes(query.toLowerCase())
     )

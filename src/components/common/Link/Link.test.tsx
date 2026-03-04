@@ -18,7 +18,9 @@ describe('CustomLink', () => {
   it('should render external link', () => {
     render(
       <MemoryRouter>
-        <CustomLink href="https://pokeapi.co" external>API</CustomLink>
+        <CustomLink href="https://pokeapi.co" external>
+          API
+        </CustomLink>
       </MemoryRouter>
     )
     const link = screen.getByText('API').closest('a')
@@ -30,7 +32,9 @@ describe('CustomLink', () => {
   it('should apply variant styles', () => {
     render(
       <MemoryRouter>
-        <CustomLink to="/test" variant="success">Green Link</CustomLink>
+        <CustomLink to="/test" variant="success">
+          Green Link
+        </CustomLink>
       </MemoryRouter>
     )
     expect(screen.getByText('Green Link')).toHaveClass('text-green-500')
@@ -39,7 +43,9 @@ describe('CustomLink', () => {
   it('should apply size styles', () => {
     render(
       <MemoryRouter>
-        <CustomLink to="/test" size="lg">Large</CustomLink>
+        <CustomLink to="/test" size="lg">
+          Large
+        </CustomLink>
       </MemoryRouter>
     )
     expect(screen.getByText('Large')).toHaveClass('text-lg')
@@ -48,7 +54,9 @@ describe('CustomLink', () => {
   it('should apply underline styles', () => {
     render(
       <MemoryRouter>
-        <CustomLink to="/test" underline="always">Always underline</CustomLink>
+        <CustomLink to="/test" underline="always">
+          Always underline
+        </CustomLink>
       </MemoryRouter>
     )
     expect(screen.getByText('Always underline')).toHaveClass('underline')
@@ -57,7 +65,9 @@ describe('CustomLink', () => {
   it('should show external link icon for external links', () => {
     render(
       <MemoryRouter>
-        <CustomLink href="https://example.com" external>External</CustomLink>
+        <CustomLink href="https://example.com" external>
+          External
+        </CustomLink>
       </MemoryRouter>
     )
     const link = screen.getByText('External').closest('a')

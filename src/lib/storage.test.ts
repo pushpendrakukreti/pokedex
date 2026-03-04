@@ -1,5 +1,11 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
-import { getStorageItem, setStorageItem, removeStorageItem, clearStorage, isStorageAvailable } from './storage'
+import {
+  getStorageItem,
+  setStorageItem,
+  removeStorageItem,
+  clearStorage,
+  isStorageAvailable,
+} from './storage'
 
 describe('Storage utilities', () => {
   beforeEach(() => {

@@ -1,7 +1,7 @@
 // General application constants
 
 export const APP_CONFIG = {
-  NAME: 'Pokemon Explorer',
+  NAME: 'Pokedex',
   VERSION: '1.0.0',
   DESCRIPTION: 'A React application for exploring Pokemon',
 } as const

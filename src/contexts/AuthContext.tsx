@@ -1,6 +1,13 @@
 /* eslint-disable react-refresh/only-export-components */
 import { createContext, useState, useCallback, useEffect, type ReactNode } from 'react'
-import type { AuthContextValue, AuthState, User, LoginCredentials, RegisterCredentials, AuthTokens } from '../types/auth'
+import type {
+  AuthContextValue,
+  AuthState,
+  User,
+  LoginCredentials,
+  RegisterCredentials,
+  AuthTokens,
+} from '../types/auth'
 import { getStorageItem, setStorageItem, removeStorageItem } from '../lib/storage'
 import { STORAGE_KEYS } from '../constants/app'
 
@@ -53,7 +60,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
     try {
       // TODO: Replace with actual API call
       // const response = await authService.login(credentials)
-      
+
       // Placeholder implementation
       const mockUser: User = {
         id: '1',
@@ -102,24 +109,27 @@ export function AuthProvider({ children }: AuthProviderProps) {
     })
   }, [])
 
-  const register = useCallback(async (credentials: RegisterCredentials) => {
-    setState((prev) => ({ ...prev, isLoading: true, error: null }))
+  const register = useCallback(
+    async (credentials: RegisterCredentials) => {
+      setState((prev) => ({ ...prev, isLoading: true, error: null }))
 
-    try {
-      // TODO: Replace with actual API call
-      // const response = await authService.register(credentials)
-      
-      // After registration, automatically log in
-      await login({ email: credentials.email, password: credentials.password })
-    } catch (error) {
-      setState((prev) => ({
-        ...prev,
-        isLoading: false,
-        error: error instanceof Error ? error.message : 'Registration failed',
-      }))
-      throw error
-    }
-  }, [login])
+      try {
+        // TODO: Replace with actual API call
+        // const response = await authService.register(credentials)
+
+        // After registration, automatically log in
+        await login({ email: credentials.email, password: credentials.password })
+      } catch (error) {
+        setState((prev) => ({
+          ...prev,
+          isLoading: false,
+          error: error instanceof Error ? error.message : 'Registration failed',
+        }))
+        throw error
+      }
+    },
+    [login]
+  )
 
   const refreshToken = useCallback(async () => {
     try {

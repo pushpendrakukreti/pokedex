@@ -45,9 +45,7 @@ describe('Notification utilities', () => {
       setNotificationHandler(handler)
 
       showNotification('Test')
-      expect(handler).toHaveBeenCalledWith(
-        expect.objectContaining({ type: 'info' })
-      )
+      expect(handler).toHaveBeenCalledWith(expect.objectContaining({ type: 'info' }))
     })
 
     it('should merge custom options', () => {

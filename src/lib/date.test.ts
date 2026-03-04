@@ -1,5 +1,13 @@
 import { describe, it, expect, vi, afterEach } from 'vitest'
-import { formatDate, formatDateShort, formatTime, formatRelativeTime, isToday, isPast, isFuture } from './date'
+import {
+  formatDate,
+  formatDateShort,
+  formatTime,
+  formatRelativeTime,
+  isToday,
+  isPast,
+  isFuture,
+} from './date'
 
 describe('Date utilities', () => {
   afterEach(() => {

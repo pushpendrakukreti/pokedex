@@ -12,44 +12,45 @@ interface AlertProps {
   autoClose?: number
 }
 
-const variantClasses: Record<Variant, { bg: string; border: string; text: string; icon: string }> = {
-  primary: {
-    bg: 'bg-blue-50',
-    border: 'border-blue-200',
-    text: 'text-blue-800',
-    icon: 'text-blue-400',
-  },
-  secondary: {
-    bg: 'bg-gray-50',
-    border: 'border-gray-200',
-    text: 'text-gray-800',
-    icon: 'text-gray-400',
-  },
-  success: {
-    bg: 'bg-green-50',
-    border: 'border-green-200',
-    text: 'text-green-800',
-    icon: 'text-green-400',
-  },
-  warning: {
-    bg: 'bg-yellow-50',
-    border: 'border-yellow-200',
-    text: 'text-yellow-800',
-    icon: 'text-yellow-400',
-  },
-  error: {
-    bg: 'bg-red-50',
-    border: 'border-red-200',
-    text: 'text-red-800',
-    icon: 'text-red-400',
-  },
-  info: {
-    bg: 'bg-cyan-50',
-    border: 'border-cyan-200',
-    text: 'text-cyan-800',
-    icon: 'text-cyan-400',
-  },
-}
+const variantClasses: Record<Variant, { bg: string; border: string; text: string; icon: string }> =
+  {
+    primary: {
+      bg: 'bg-blue-50',
+      border: 'border-blue-200',
+      text: 'text-blue-800',
+      icon: 'text-blue-400',
+    },
+    secondary: {
+      bg: 'bg-gray-50',
+      border: 'border-gray-200',
+      text: 'text-gray-800',
+      icon: 'text-gray-400',
+    },
+    success: {
+      bg: 'bg-green-50',
+      border: 'border-green-200',
+      text: 'text-green-800',
+      icon: 'text-green-400',
+    },
+    warning: {
+      bg: 'bg-yellow-50',
+      border: 'border-yellow-200',
+      text: 'text-yellow-800',
+      icon: 'text-yellow-400',
+    },
+    error: {
+      bg: 'bg-red-50',
+      border: 'border-red-200',
+      text: 'text-red-800',
+      icon: 'text-red-400',
+    },
+    info: {
+      bg: 'bg-cyan-50',
+      border: 'border-cyan-200',
+      text: 'text-cyan-800',
+      icon: 'text-cyan-400',
+    },
+  }
 
 const defaultIcons: Record<Variant, React.ReactNode> = {
   primary: (
@@ -150,7 +151,7 @@ export function Alert({
       role="alert"
     >
       <div className="flex">
-        {displayIcon && <div className={`flex-shrink-0 ${styles.icon}`}>{displayIcon}</div>}
+        {displayIcon && <div className={`shrink-0 ${styles.icon}`}>{displayIcon}</div>}
         <div className={`${displayIcon ? 'ml-3' : ''} flex-1`}>
           {title && <h3 className="text-sm font-medium">{title}</h3>}
           <div className={`text-sm ${title ? 'mt-1' : ''}`}>{children}</div>

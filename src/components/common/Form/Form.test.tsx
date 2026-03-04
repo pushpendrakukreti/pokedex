@@ -17,7 +17,7 @@ describe('Form', () => {
   it('should handle submit event', async () => {
     const handleSubmit = vi.fn((e) => e.preventDefault())
     render(<Form onSubmit={handleSubmit}>Content</Form>)
-    
+
     const form = screen.getByText('Content').closest('form')!
     form.dispatchEvent(new Event('submit', { bubbles: true }))
     expect(handleSubmit).toHaveBeenCalled()

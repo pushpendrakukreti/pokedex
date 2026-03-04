@@ -5,7 +5,7 @@ import Footer from './Footer'
 describe('Footer', () => {
   it('should render the app name', () => {
     render(<Footer />)
-    expect(screen.getByText('Pokemon Explorer')).toBeInTheDocument()
+    expect(screen.getByText('Pokedex')).toBeInTheDocument()
   })
 
   it('should render the app description', () => {

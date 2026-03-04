@@ -42,10 +42,7 @@ export function PokemonProvider({ children }: PokemonProviderProps) {
     setFavorites((prev) => prev.filter((f) => f !== name))
   }, [])
 
-  const isFavorite = useCallback(
-    (name: string) => favorites.includes(name),
-    [favorites]
-  )
+  const isFavorite = useCallback((name: string) => favorites.includes(name), [favorites])
 
   const toggleFavorite = useCallback(
     (name: string) => {
@@ -86,9 +83,7 @@ export function PokemonProvider({ children }: PokemonProviderProps) {
     setSelectedPokemon,
   }
 
-  return (
-    <PokemonContext.Provider value={value}>{children}</PokemonContext.Provider>
-  )
+  return <PokemonContext.Provider value={value}>{children}</PokemonContext.Provider>
 }
 
 export default PokemonProvider

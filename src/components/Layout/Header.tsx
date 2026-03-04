@@ -12,11 +12,7 @@ export function Header() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to={ROUTE_PATHS.HOME} className="flex items-center space-x-2">
-            <svg
-              className="w-8 h-8 text-blue-500"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
+            <svg className="w-8 h-8 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
               <circle cx="12" cy="12" r="10" fill="currentColor" />
               <circle cx="12" cy="12" r="3" fill="white" />
               <line x1="2" y1="12" x2="22" y2="12" stroke="white" strokeWidth="2" />

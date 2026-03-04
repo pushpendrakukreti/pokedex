@@ -101,11 +101,7 @@ export function NotificationProvider({
     clearAll,
   }
 
-  return (
-    <NotificationContext.Provider value={value}>
-      {children}
-    </NotificationContext.Provider>
-  )
+  return <NotificationContext.Provider value={value}>{children}</NotificationContext.Provider>
 }
 
 export default NotificationProvider

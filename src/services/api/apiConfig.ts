@@ -13,10 +13,7 @@ export const apiConfig = {
 /**
  * Build Pokemon list endpoint URL.
  */
-export function buildPokemonListUrl(
-  limit = PAGINATION.DEFAULT_LIMIT,
-  offset = 0
-): string {
+export function buildPokemonListUrl(limit = PAGINATION.DEFAULT_LIMIT, offset = 0): string {
   return `${API_CONFIG.BASE_URL}${API_ENDPOINTS.POKEMON}?limit=${limit}&offset=${offset}`
 }
 

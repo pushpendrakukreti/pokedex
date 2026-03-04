@@ -46,14 +46,14 @@ export function Footer() {
           {/* Contact */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
-            <p className="text-gray-400 text-sm">
-              Built with React, TypeScript, and TailwindCSS
-            </p>
+            <p className="text-gray-400 text-sm">Built with React, TypeScript, and TailwindCSS</p>
           </div>
         </div>
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-400">
-          <p>&copy; {currentYear} {APP_CONFIG.NAME}. All rights reserved.</p>
+          <p>
+            &copy; {currentYear} {APP_CONFIG.NAME}. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

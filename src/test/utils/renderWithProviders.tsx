@@ -20,16 +20,20 @@ function createTestQueryClient() {
   })
 }
 
-function AllProviders({ children, options = {} }: { children: ReactNode; options?: ProvidersOptions }) {
+function AllProviders({
+  children,
+  options = {},
+}: {
+  children: ReactNode
+  options?: ProvidersOptions
+}) {
   const { route = '/', useMemoryRouter = false, queryClient = createTestQueryClient() } = options
   const Router = useMemoryRouter ? MemoryRouter : BrowserRouter
   const routerProps = useMemoryRouter ? { initialEntries: [route] } : {}
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Router {...routerProps}>
-        {children}
-      </Router>
+      <Router {...routerProps}>{children}</Router>
     </QueryClientProvider>
   )
 }

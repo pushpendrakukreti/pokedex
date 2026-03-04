@@ -31,30 +31,18 @@ export function usePagination({
   const [currentPage, setCurrentPage] = useState(initialPage)
   const [itemsPerPage, setItemsPerPageState] = useState(initialItemsPerPage)
 
-  const totalPages = useMemo(
-    () => Math.ceil(totalItems / itemsPerPage),
-    [totalItems, itemsPerPage]
-  )
+  const totalPages = useMemo(() => Math.ceil(totalItems / itemsPerPage), [totalItems, itemsPerPage])
 
-  const startIndex = useMemo(
-    () => (currentPage - 1) * itemsPerPage,
-    [currentPage, itemsPerPage]
-  )
+  const startIndex = useMemo(() => (currentPage - 1) * itemsPerPage, [currentPage, itemsPerPage])
 
   const endIndex = useMemo(
     () => Math.min(startIndex + itemsPerPage, totalItems),
     [startIndex, itemsPerPage, totalItems]
   )
 
-  const hasNextPage = useMemo(
-    () => currentPage < totalPages,
-    [currentPage, totalPages]
-  )
+  const hasNextPage = useMemo(() => currentPage < totalPages, [currentPage, totalPages])
 
-  const hasPrevPage = useMemo(
-    () => currentPage > 1,
-    [currentPage]
-  )
+  const hasPrevPage = useMemo(() => currentPage > 1, [currentPage])
 
   const goToPage = useCallback(
     (page: number) => {

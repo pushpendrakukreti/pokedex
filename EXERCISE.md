@@ -14,19 +14,19 @@ If you have any questions, don't hesitate to reach out directly to us.
 
 ## Expectations
 
-* This exercise is intentionally designed to assess how you leverage AI effectively to work faster, maintain quality, and make thoughtful trade-offs. We expect you to use AI to scaffold code, generate test cases, and draft documentation.
-* Be intentional and transparent: note where and how you used AI (tools, prompts, rationale) in the “Implementation Details” section of the README.md.
-* It should be production-ready code — the code will show us how you ship things to production and be a mirror of your craft.
-* Take whatever time you need — we won’t look at start/end dates, you have a life besides this and we respect that!
+- This exercise is intentionally designed to assess how you leverage AI effectively to work faster, maintain quality, and make thoughtful trade-offs. We expect you to use AI to scaffold code, generate test cases, and draft documentation.
+- Be intentional and transparent: note where and how you used AI (tools, prompts, rationale) in the “Implementation Details” section of the README.md.
+- It should be production-ready code — the code will show us how you ship things to production and be a mirror of your craft.
+- Take whatever time you need — we won’t look at start/end dates, you have a life besides this and we respect that!
 
 ---
 
 ## TDD is a Must
 
-* Follow a strict Test-Driven Development workflow: write failing tests first, implement the minimal code to pass, then refactor.
-* Your commit history should clearly reflect the TDD loop (red → green → refactor).
-* Include unit and/or integration tests that are fast, deterministic, and meaningful.
-* Your tests should validate user behavior and business logic, not just implementation details.
+- Follow a strict Test-Driven Development workflow: write failing tests first, implement the minimal code to pass, then refactor.
+- Your commit history should clearly reflect the TDD loop (red → green → refactor).
+- Include unit and/or integration tests that are fast, deterministic, and meaningful.
+- Your tests should validate user behavior and business logic, not just implementation details.
 
 ---
 
@@ -52,21 +52,20 @@ Handle loading and error states appropriately.
 
 ## General Expectations
 
-* The application should reflect real-world usage and remain responsive as the dataset grows.
-* Design decisions are intentionally left open — we want to see your creativity!
-* Your solution should balance usability, performance, and maintainability.
+- The application should reflect real-world usage and remain responsive as the dataset grows.
+- Design decisions are intentionally left open — we want to see your creativity!
+- Your solution should balance usability, performance, and maintainability.
 
 ---
 
 ## When You're Done
 
-* Deploy the application and include a live link in your README.
-* Include screenshots.
-* Add a decent README with relevant information, including:
-
-  * Setup instructions
-  * Architectural decisions
-  * Trade-offs made
-  * AI usage details
+- Deploy the application and include a live link in your README.
+- Include screenshots.
+- Add a decent README with relevant information, including:
+  - Setup instructions
+  - Architectural decisions
+  - Trade-offs made
+  - AI usage details
 
 Send us the link to your repo once you’re happy with what you have done.

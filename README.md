@@ -39,23 +39,26 @@ A modern web application for browsing and exploring Pokémon data, built with Re
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - npm or yarn
 
 ### Installation
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/pushpendrakukreti/pokedex.git
    cd pokedex
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    ```
 
 3. Start the development server:
+
    ```bash
    npm run dev
    ```
@@ -64,18 +67,18 @@ A modern web application for browsing and exploring Pokémon data, built with Re
 
 ### Available Scripts
 
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start development server |
-| `npm run build` | Build for production |
-| `npm run preview` | Preview production build |
-| `npm run test` | Run tests in watch mode |
-| `npm run test:run` | Run tests once |
+| Command                 | Description                    |
+| ----------------------- | ------------------------------ |
+| `npm run dev`           | Start development server       |
+| `npm run build`         | Build for production           |
+| `npm run preview`       | Preview production build       |
+| `npm run test`          | Run tests in watch mode        |
+| `npm run test:run`      | Run tests once                 |
 | `npm run test:coverage` | Run tests with coverage report |
-| `npm run lint` | Run ESLint |
-| `npm run lint:fix` | Fix ESLint issues |
-| `npm run format` | Format code with Prettier |
-| `npm run format:check` | Check code formatting |
+| `npm run lint`          | Run ESLint                     |
+| `npm run lint:fix`      | Fix ESLint issues              |
+| `npm run format`        | Format code with Prettier      |
+| `npm run format:check`  | Check code formatting          |
 
 ## 🏗️ Architecture
 
@@ -117,7 +120,7 @@ src/
 
 ### Key Architectural Decisions
 
-1. **React Query for Data Fetching**: 
+1. **React Query for Data Fetching**:
    - Provides built-in caching, refetching, and loading state management
    - Reduces boilerplate compared to manual state management
    - Improves performance with background refetching
@@ -174,16 +177,17 @@ npm run test
 
 The project maintains **96%+ test coverage** with 64 tests across 6 test files:
 
-| Test File | Tests |
-|-----------|-------|
-| PokemonCard.test.tsx | 8 |
-| PokemonDetail.test.tsx | 9 |
-| PokemonList.test.tsx | 8 |
-| pokemonApi.test.ts | 12 |
-| helper.test.ts | 23 |
-| App.integration.test.tsx | 4 |
+| Test File                | Tests |
+| ------------------------ | ----- |
+| PokemonCard.test.tsx     | 8     |
+| PokemonDetail.test.tsx   | 9     |
+| PokemonList.test.tsx     | 8     |
+| pokemonApi.test.ts       | 12    |
+| helper.test.ts           | 23    |
+| App.integration.test.tsx | 4     |
 
 Coverage includes:
+
 - Component rendering and styling
 - User interactions (filtering, navigation)
 - Loading and error states
@@ -241,29 +245,35 @@ The application is deployed automatically to Vercel on successful builds to the 
 This project leveraged AI assistance for:
 
 ### Code Scaffolding
+
 - Initial project structure setup
 - Component boilerplate generation
 - TypeScript interfaces from API documentation
 
 ### Test Generation
+
 - Unit test cases for components
 - Integration test scenarios
 - Mock handler setup
 
 ### Documentation
+
 - README structure and content
 - Code comments
 - API documentation
 
 ### Tools Used
+
 - GitHub Copilot for code completion
 - Claude for architectural decisions and documentation
 
 ### Rationale
+
 AI assistance was used to accelerate development while maintaining code quality. All AI-generated code was reviewed, tested, and modified as needed to meet project requirements.
 
 ## 👤 Author
 
 **Your Name**
+
 - GitHub: [@pushpendrakukreti](https://github.com/pushpendrakukreti)
 - LinkedIn: [Your Profile](https://linkedin.com/in/pkukreti)

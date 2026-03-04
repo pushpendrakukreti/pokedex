@@ -9,9 +9,7 @@ describe('useForm', () => {
   }
 
   it('should initialize with provided values', () => {
-    const { result } = renderHook(() =>
-      useForm({ initialValues: defaultValues })
-    )
+    const { result } = renderHook(() => useForm({ initialValues: defaultValues }))
 
     expect(result.current.values).toEqual(defaultValues)
     expect(result.current.errors).toEqual({})
@@ -20,9 +18,7 @@ describe('useForm', () => {
   })
 
   it('should update value on handleChange', () => {
-    const { result } = renderHook(() =>
-      useForm({ initialValues: defaultValues })
-    )
+    const { result } = renderHook(() => useForm({ initialValues: defaultValues }))
 
     act(() => {
       result.current.handleChange({
@@ -34,9 +30,7 @@ describe('useForm', () => {
   })
 
   it('should set touched on handleBlur', () => {
-    const { result } = renderHook(() =>
-      useForm({ initialValues: defaultValues })
-    )
+    const { result } = renderHook(() => useForm({ initialValues: defaultValues }))
 
     act(() => {
       result.current.handleBlur({
@@ -49,9 +43,7 @@ describe('useForm', () => {
 
   it('should validate on blur', () => {
     const validate = vi.fn().mockReturnValue({ name: 'Name is required' })
-    const { result } = renderHook(() =>
-      useForm({ initialValues: defaultValues, validate })
-    )
+    const { result } = renderHook(() => useForm({ initialValues: defaultValues, validate }))
 
     act(() => {
       result.current.handleBlur({
@@ -95,9 +87,7 @@ describe('useForm', () => {
   })
 
   it('should set and clear individual errors', () => {
-    const { result } = renderHook(() =>
-      useForm({ initialValues: defaultValues })
-    )
+    const { result } = renderHook(() => useForm({ initialValues: defaultValues }))
 
     act(() => {
       result.current.setError('email', 'Invalid email')
@@ -111,9 +101,7 @@ describe('useForm', () => {
   })
 
   it('should set value programmatically', () => {
-    const { result } = renderHook(() =>
-      useForm({ initialValues: defaultValues })
-    )
+    const { result } = renderHook(() => useForm({ initialValues: defaultValues }))
 
     act(() => {
       result.current.setValue('name', 'Jane')
@@ -122,9 +110,7 @@ describe('useForm', () => {
   })
 
   it('should set multiple values', () => {
-    const { result } = renderHook(() =>
-      useForm({ initialValues: defaultValues })
-    )
+    const { result } = renderHook(() => useForm({ initialValues: defaultValues }))
 
     act(() => {
       result.current.setValues({ name: 'Jane', email: 'jane@test.com' })
@@ -133,9 +119,7 @@ describe('useForm', () => {
   })
 
   it('should reset form to initial values', () => {
-    const { result } = renderHook(() =>
-      useForm({ initialValues: defaultValues })
-    )
+    const { result } = renderHook(() => useForm({ initialValues: defaultValues }))
 
     act(() => {
       result.current.setValue('name', 'John')
@@ -152,9 +136,7 @@ describe('useForm', () => {
   })
 
   it('should return field props via getFieldProps', () => {
-    const { result } = renderHook(() =>
-      useForm({ initialValues: defaultValues })
-    )
+    const { result } = renderHook(() => useForm({ initialValues: defaultValues }))
 
     const fieldProps = result.current.getFieldProps('name')
     expect(fieldProps.name).toBe('name')
@@ -170,9 +152,7 @@ describe('useForm', () => {
       return errors
     }
 
-    const { result } = renderHook(() =>
-      useForm({ initialValues: defaultValues, validate })
-    )
+    const { result } = renderHook(() => useForm({ initialValues: defaultValues, validate }))
 
     expect(result.current.isValid).toBe(false)
 

@@ -78,9 +78,7 @@ describe('useFetch', () => {
   it('should use initialData', () => {
     const fetchFn = vi.fn().mockResolvedValue(mockData)
     const initialData = { id: 0, name: 'initial' }
-    const { result } = renderHook(() =>
-      useFetch(fetchFn, { immediate: false, initialData })
-    )
+    const { result } = renderHook(() => useFetch(fetchFn, { immediate: false, initialData }))
 
     expect(result.current.data).toEqual(initialData)
   })

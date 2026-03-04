@@ -31,10 +31,7 @@ function PokemonFilterComponent({ selectedTypes, onTypeChange }: PokemonFilterPr
       <div className="flex items-center justify-between mb-3">
         <h3 className="text-sm font-medium text-gray-700">Filter by Type</h3>
         {selectedTypes.length > 0 && (
-          <button
-            onClick={handleClearAll}
-            className="text-sm text-blue-500 hover:text-blue-700"
-          >
+          <button onClick={handleClearAll} className="text-sm text-blue-500 hover:text-blue-700">
             Clear all
           </button>
         )}

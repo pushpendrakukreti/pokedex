@@ -26,7 +26,9 @@ export function PokemonDetail() {
   // Memoize image URL computation
   const imageUrl = useMemo(() => {
     if (!pokemon) return null
-    return pokemon.sprites.other?.['official-artwork']?.front_default || pokemon.sprites.front_default
+    return (
+      pokemon.sprites.other?.['official-artwork']?.front_default || pokemon.sprites.front_default
+    )
   }, [pokemon])
 
   // Memoize formatted stats for display

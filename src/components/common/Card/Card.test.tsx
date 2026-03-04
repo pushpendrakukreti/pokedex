@@ -15,23 +15,39 @@ describe('Card', () => {
   })
 
   it('should apply custom padding', () => {
-    render(<Card data-testid="card" padding="lg">Content</Card>)
+    render(
+      <Card data-testid="card" padding="lg">
+        Content
+      </Card>
+    )
     expect(screen.getByTestId('card')).toHaveClass('p-6')
   })
 
   it('should apply no padding', () => {
-    render(<Card data-testid="card" padding="none">Content</Card>)
+    render(
+      <Card data-testid="card" padding="none">
+        Content
+      </Card>
+    )
     const card = screen.getByTestId('card')
     expect(card).not.toHaveClass('p-4')
   })
 
   it('should apply hoverable class', () => {
-    render(<Card data-testid="card" hoverable>Content</Card>)
+    render(
+      <Card data-testid="card" hoverable>
+        Content
+      </Card>
+    )
     expect(screen.getByTestId('card')).toHaveClass('hover:shadow-xl')
   })
 
   it('should apply custom className', () => {
-    render(<Card data-testid="card" className="my-class">Content</Card>)
+    render(
+      <Card data-testid="card" className="my-class">
+        Content
+      </Card>
+    )
     expect(screen.getByTestId('card')).toHaveClass('my-class')
   })
 })

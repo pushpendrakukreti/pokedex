@@ -39,7 +39,7 @@ describe('Input', () => {
     const user = userEvent.setup()
     const handleChange = vi.fn()
     render(<Input onChange={handleChange} placeholder="type here" />)
-    
+
     await user.type(screen.getByPlaceholderText('type here'), 'hello')
     expect(handleChange).toHaveBeenCalled()
   })

@@ -23,10 +23,7 @@ export class FetchError extends Error {
 /**
  * Fetch wrapper with timeout and error handling.
  */
-export async function fetchWithTimeout<T>(
-  url: string,
-  options: FetchOptions = {}
-): Promise<T> {
+export async function fetchWithTimeout<T>(url: string, options: FetchOptions = {}): Promise<T> {
   const { timeout = API_CONFIG.TIMEOUT, ...fetchOptions } = options
 
   const controller = new AbortController()
@@ -70,11 +67,7 @@ export async function get<T>(url: string, options?: FetchOptions): Promise<T> {
 /**
  * Simple POST request wrapper
  */
-export async function post<T>(
-  url: string,
-  data?: unknown,
-  options?: FetchOptions
-): Promise<T> {
+export async function post<T>(url: string, data?: unknown, options?: FetchOptions): Promise<T> {
   return fetchWithTimeout<T>(url, {
     ...options,
     method: 'POST',

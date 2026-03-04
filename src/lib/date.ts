@@ -5,7 +5,10 @@
 /**
  * Format a date to a readable string.
  */
-export function formatDate(date: Date | string | number, options?: Intl.DateTimeFormatOptions): string {
+export function formatDate(
+  date: Date | string | number,
+  options?: Intl.DateTimeFormatOptions
+): string {
   const dateObj = new Date(date)
   const defaultOptions: Intl.DateTimeFormatOptions = {
     year: 'numeric',
@@ -31,7 +34,10 @@ export function formatDateShort(date: Date | string | number): string {
 /**
  * Format a date to a time string.
  */
-export function formatTime(date: Date | string | number, options?: Intl.DateTimeFormatOptions): string {
+export function formatTime(
+  date: Date | string | number,
+  options?: Intl.DateTimeFormatOptions
+): string {
   const dateObj = new Date(date)
   const defaultOptions: Intl.DateTimeFormatOptions = {
     hour: '2-digit',

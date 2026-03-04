@@ -33,7 +33,11 @@ describe('Alert', () => {
   it('should call onDismiss when dismissed', async () => {
     const user = userEvent.setup()
     const onDismiss = vi.fn()
-    render(<Alert dismissible onDismiss={onDismiss}>Dismiss me</Alert>)
+    render(
+      <Alert dismissible onDismiss={onDismiss}>
+        Dismiss me
+      </Alert>
+    )
 
     await user.click(screen.getByLabelText('Dismiss'))
     expect(onDismiss).toHaveBeenCalledOnce()
@@ -42,7 +46,7 @@ describe('Alert', () => {
   it('should hide alert when dismissed', async () => {
     const user = userEvent.setup()
     render(<Alert dismissible>Dismiss me</Alert>)
-    
+
     await user.click(screen.getByLabelText('Dismiss'))
     expect(screen.queryByRole('alert')).not.toBeInTheDocument()
   })
@@ -50,14 +54,18 @@ describe('Alert', () => {
   it('should auto-close after specified duration', async () => {
     vi.useFakeTimers()
     const onDismiss = vi.fn()
-    render(<Alert autoClose={1000} onDismiss={onDismiss}>Auto close</Alert>)
+    render(
+      <Alert autoClose={1000} onDismiss={onDismiss}>
+        Auto close
+      </Alert>
+    )
 
     expect(screen.getByRole('alert')).toBeInTheDocument()
-    
+
     act(() => {
       vi.advanceTimersByTime(1000)
     })
-    
+
     expect(screen.queryByRole('alert')).not.toBeInTheDocument()
     expect(onDismiss).toHaveBeenCalled()
     vi.useRealTimers()

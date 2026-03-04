@@ -18,7 +18,8 @@ const variantClasses: Record<ButtonVariant, string> = {
   error: 'bg-red-500 text-white hover:bg-red-600 focus:ring-red-500',
   info: 'bg-cyan-500 text-white hover:bg-cyan-600 focus:ring-cyan-500',
   ghost: 'bg-transparent text-gray-700 hover:bg-gray-100 focus:ring-gray-500',
-  outline: 'bg-transparent border-2 border-gray-300 text-gray-700 hover:bg-gray-50 focus:ring-gray-500',
+  outline:
+    'bg-transparent border-2 border-gray-300 text-gray-700 hover:bg-gray-50 focus:ring-gray-500',
   link: 'bg-transparent text-blue-500 hover:text-blue-700 hover:underline p-0',
 }
 
@@ -65,11 +66,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <button ref={ref} className={classes} disabled={disabled || isLoading} {...props}>
         {isLoading && (
-          <svg
-            className="animate-spin -ml-1 mr-2 h-4 w-4"
-            fill="none"
-            viewBox="0 0 24 24"
-          >
+          <svg className="animate-spin -ml-1 mr-2 h-4 w-4" fill="none" viewBox="0 0 24 24">
             <circle
               className="opacity-25"
               cx="12"

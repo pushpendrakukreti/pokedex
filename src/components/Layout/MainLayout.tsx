@@ -11,11 +11,7 @@ interface MainLayoutProps {
 /**
  * MainLayout component that wraps page content with header and footer.
  */
-export function MainLayout({
-  children,
-  showHeader = true,
-  showFooter = true,
-}: MainLayoutProps) {
+export function MainLayout({ children, showHeader = true, showFooter = true }: MainLayoutProps) {
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
       {showHeader && <Header />}

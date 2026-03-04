@@ -53,13 +53,13 @@ export function useFetch<T>(
 
     try {
       const result = await fetchFnRef.current()
-      
+
       if (isMounted.current) {
         setData(result)
         setStatus('success')
         onSuccess?.(result)
       }
-      
+
       return result
     } catch (err) {
       if (isMounted.current) {

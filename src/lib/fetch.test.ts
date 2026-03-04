@@ -61,9 +61,12 @@ describe('Fetch utilities', () => {
       vi.mocked(fetch).mockResolvedValueOnce(mockResponse(mockData))
 
       await fetchWithTimeout('https://api.example.com/data')
-      expect(fetch).toHaveBeenCalledWith('https://api.example.com/data', expect.objectContaining({
-        signal: expect.any(AbortSignal),
-      }))
+      expect(fetch).toHaveBeenCalledWith(
+        'https://api.example.com/data',
+        expect.objectContaining({
+          signal: expect.any(AbortSignal),
+        })
+      )
     })
   })
 
@@ -74,9 +77,12 @@ describe('Fetch utilities', () => {
 
       const result = await get<typeof mockData>('https://api.example.com/list')
       expect(result).toEqual(mockData)
-      expect(fetch).toHaveBeenCalledWith('https://api.example.com/list', expect.objectContaining({
-        method: 'GET',
-      }))
+      expect(fetch).toHaveBeenCalledWith(
+        'https://api.example.com/list',
+        expect.objectContaining({
+          method: 'GET',
+        })
+      )
     })
   })
 
@@ -88,23 +94,29 @@ describe('Fetch utilities', () => {
 
       const result = await post<typeof mockData>('https://api.example.com/create', postData)
       expect(result).toEqual(mockData)
-      expect(fetch).toHaveBeenCalledWith('https://api.example.com/create', expect.objectContaining({
-        method: 'POST',
-        body: JSON.stringify(postData),
-        headers: expect.objectContaining({
-          'Content-Type': 'application/json',
-        }),
-      }))
+      expect(fetch).toHaveBeenCalledWith(
+        'https://api.example.com/create',
+        expect.objectContaining({
+          method: 'POST',
+          body: JSON.stringify(postData),
+          headers: expect.objectContaining({
+            'Content-Type': 'application/json',
+          }),
+        })
+      )
     })
 
     it('should make a POST request without body', async () => {
       vi.mocked(fetch).mockResolvedValueOnce(mockResponse({ ok: true }))
 
       await post('https://api.example.com/action')
-      expect(fetch).toHaveBeenCalledWith('https://api.example.com/action', expect.objectContaining({
-        method: 'POST',
-        body: undefined,
-      }))
+      expect(fetch).toHaveBeenCalledWith(
+        'https://api.example.com/action',
+        expect.objectContaining({
+          method: 'POST',
+          body: undefined,
+        })
+      )
     })
   })
 })

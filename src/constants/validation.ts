@@ -25,7 +25,8 @@ export const VALIDATION_MESSAGES = {
   REQUIRED: 'This field is required',
   EMAIL_INVALID: 'Please enter a valid email address',
   PASSWORD_TOO_SHORT: `Password must be at least ${VALIDATION_RULES.PASSWORD.MIN_LENGTH} characters`,
-  PASSWORD_INVALID: 'Password must contain at least one uppercase letter, one lowercase letter, and one number',
+  PASSWORD_INVALID:
+    'Password must contain at least one uppercase letter, one lowercase letter, and one number',
   NAME_TOO_SHORT: `Name must be at least ${VALIDATION_RULES.NAME.MIN_LENGTH} characters`,
   NAME_TOO_LONG: `Name must be less than ${VALIDATION_RULES.NAME.MAX_LENGTH} characters`,
   NAME_INVALID: 'Name can only contain letters, spaces, hyphens, and apostrophes',

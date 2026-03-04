@@ -5,6 +5,7 @@
 ## **1. Project Setup**
 
 ### **Tasks**
+
 1. Initialize the project with a modern JavaScript framework (e.g., React, Next.js, or Vue.js). For this plan, we’ll use **React** with **TypeScript**.
 2. Set up the project structure:
    - `src/` for application code.
@@ -20,6 +21,7 @@
 7. Set up CI/CD pipeline using GitHub Actions for automated testing and deployment.
 
 ### **Commit Messages**
+
 - `chore: initialize React project with TypeScript`
 - `chore: add ESLint, Prettier, and TailwindCSS`
 - `chore: configure Jest and React Testing Library`
@@ -30,6 +32,7 @@
 ## **2. Pokémon Listing Page**
 
 ### **Tasks**
+
 1. **Write Tests First (TDD)**:
    - Write a failing test for rendering a list of Pokémon fetched from the API.
    - Write a failing test for filtering Pokémon by name.
@@ -45,6 +48,7 @@
    - Display loading and error states.
 
 ### **Commit Messages**
+
 - `test: add failing test for Pokémon list rendering`
 - `feat: implement Pokémon list fetching and rendering`
 - `test: add failing test for Pokémon filtering`
@@ -57,6 +61,7 @@
 ## **3. Pokémon Detail Page**
 
 ### **Tasks**
+
 1. **Write Tests First (TDD)**:
    - Write a failing test for navigating to the detail page.
    - Write a failing test for rendering Pokémon details.
@@ -71,6 +76,7 @@
    - Handle invalid Pokémon IDs gracefully.
 
 ### **Commit Messages**
+
 - `test: add failing test for Pokémon detail navigation`
 - `feat: implement Pokémon detail page`
 - `test: add failing test for Pokémon detail rendering`
@@ -82,12 +88,14 @@
 ## **4. Testing**
 
 ### **Tasks**
+
 1. Write unit tests for all components.
 2. Write integration tests for the Pokémon listing and detail pages.
 3. Ensure 100% test coverage for critical paths.
 4. Run tests in CI pipeline.
 
 ### **Commit Messages**
+
 - `test: add unit tests for PokemonList component`
 - `test: add integration tests for Pokémon listing page`
 - `test: add unit tests for PokemonDetail component`
@@ -98,6 +106,7 @@
 ## **5. Deployment**
 
 ### **Tasks**
+
 1. Set up deployment pipeline in GitHub Actions:
    - Build the application.
    - Deploy to a platform like Vercel, Netlify, or AWS.
@@ -105,6 +114,7 @@
 3. Include screenshots of the application.
 
 ### **Commit Messages**
+
 - `chore: configure GitHub Actions for deployment`
 - `chore: deploy application to Vercel`
 - `docs: add live link and screenshots to README`
@@ -114,6 +124,7 @@
 ## **6. Documentation**
 
 ### **Tasks**
+
 1. Write a detailed `README.md`:
    - Setup instructions.
    - Architectural decisions.
@@ -123,6 +134,7 @@
 3. Include a section on how to run tests locally.
 
 ### **Commit Messages**
+
 - `docs: add setup instructions to README`
 - `docs: document architectural decisions and trade-offs`
 - `docs: add AI usage details to README`
@@ -132,6 +144,7 @@
 ## **7. Final Review**
 
 ### **Tasks**
+
 1. Perform a final code review to ensure:
    - Code adheres to modern standards.
    - Tests are meaningful and deterministic.
@@ -139,12 +152,14 @@
 2. Address any remaining issues or feedback.
 
 ### **Commit Messages**
+
 - `chore: address code review feedback`
 - `chore: finalize application for submission`
 
 ---
 
 ## **CI/CD Standards**
+
 1. **CI Pipeline**:
    - Run linting and formatting checks.
    - Run unit and integration tests.
@@ -157,6 +172,7 @@
 ---
 
 ## **Commit History Example**
+
 1. `chore: initialize React project with TypeScript`
 2. `test: add failing test for Pokémon list rendering`
 3. `feat: implement Pokémon list fetching and rendering`

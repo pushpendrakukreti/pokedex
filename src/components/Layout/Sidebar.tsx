@@ -98,7 +98,7 @@ export function Sidebar({ items = defaultItems, isOpen = true, onClose }: Sideba
                   }`}
                   onClick={onClose}
                 >
-                  {item.icon && <span className="flex-shrink-0">{item.icon}</span>}
+                  {item.icon && <span className="shrink-0">{item.icon}</span>}
                   {!collapsed && <span className="ml-3">{item.label}</span>}
                 </Link>
               </li>

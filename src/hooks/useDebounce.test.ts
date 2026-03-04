@@ -13,10 +13,9 @@ describe('useDebounce', () => {
   })
 
   it('should debounce value changes', () => {
-    const { result, rerender } = renderHook(
-      ({ value, delay }) => useDebounce(value, delay),
-      { initialProps: { value: 'initial', delay: 500 } }
-    )
+    const { result, rerender } = renderHook(({ value, delay }) => useDebounce(value, delay), {
+      initialProps: { value: 'initial', delay: 500 },
+    })
 
     rerender({ value: 'updated', delay: 500 })
 
@@ -32,16 +31,15 @@ describe('useDebounce', () => {
   })
 
   it('should reset timer when value changes during delay', () => {
-    const { result, rerender } = renderHook(
-      ({ value, delay }) => useDebounce(value, delay),
-      { initialProps: { value: 'initial', delay: 500 } }
-    )
+    const { result, rerender } = renderHook(({ value, delay }) => useDebounce(value, delay), {
+      initialProps: { value: 'initial', delay: 500 },
+    })
 
     rerender({ value: 'first-update', delay: 500 })
     act(() => {
       vi.advanceTimersByTime(300)
     })
-    
+
     rerender({ value: 'second-update', delay: 500 })
     act(() => {
       vi.advanceTimersByTime(300)
@@ -58,10 +56,9 @@ describe('useDebounce', () => {
   })
 
   it('should use default delay of 500ms', () => {
-    const { result, rerender } = renderHook(
-      ({ value }) => useDebounce(value),
-      { initialProps: { value: 'initial' } }
-    )
+    const { result, rerender } = renderHook(({ value }) => useDebounce(value), {
+      initialProps: { value: 'initial' },
+    })
 
     rerender({ value: 'updated' })
 
@@ -77,10 +74,9 @@ describe('useDebounce', () => {
   })
 
   it('should work with number values', () => {
-    const { result, rerender } = renderHook(
-      ({ value }) => useDebounce(value, 300),
-      { initialProps: { value: 0 } }
-    )
+    const { result, rerender } = renderHook(({ value }) => useDebounce(value, 300), {
+      initialProps: { value: 0 },
+    })
 
     rerender({ value: 42 })
     act(() => {
