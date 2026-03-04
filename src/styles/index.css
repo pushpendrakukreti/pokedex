@@ -1,0 +1,19 @@
+/* ==========================================================================
+   Main Styles Entry Point
+   Import all style modules here
+   ========================================================================== */
+
+/* CSS Variables (must be first) */
+@import './variables.css';
+
+/* Global base styles */
+@import './global.css';
+
+/* Typography */
+@import './typography.css';
+
+/* Animations */
+@import './animations.css';
+
+/* Responsive utilities */
+@import './responsive.css';

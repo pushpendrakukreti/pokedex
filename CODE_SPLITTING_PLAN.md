@@ -3,6 +3,12 @@
 ## Overview
 This document outlines a comprehensive plan to refactor and enhance the Pokemon frontend application with proper code splitting, modular architecture, and professional folder structure.
 
+### Key Conventions
+- **Functional Components Only**: All React components must use functional component approach (no class components). Use `react-error-boundary` or custom hooks for error boundaries.
+- **Default Exports**: All components must use `export default ComponentName`. Barrel files (`index.ts`) re-export as both named and default.
+- **TDD (Test-Driven Development)**: Write tests first for all new components. Every component, hook, context, and utility must have corresponding test files written before or alongside implementation.
+- **Commit Strategy**: Small, logical commits with clear messages on `feature/code-splitting` branch. Commits group related files by phase.
+
 ---
 
 ## 1. Project Structure Redesign
@@ -340,7 +346,8 @@ src/
 ---
 
 ### Phase 7: Error Boundary & Layout
-- [ ] Enhance `components/ErrorBoundary.tsx`:
+- [ ] Refactor `components/ErrorBoundary.tsx` to functional component approach:
+  - Use `react-error-boundary` library or wrapper with functional fallback component
   - Add error logging
   - Add error recovery mechanisms
   - Create specific error boundaries for different sections
@@ -504,10 +511,22 @@ Types:
 - `chore:` - Build, dependencies, config
 
 ### Testing Requirements
+- **TDD approach**: Write test files (`.test.tsx` / `.test.ts`) before or alongside component implementation
 - Unit tests for utilities, hooks, and services
-- Component tests for all components
+- Component tests for all components (common UI, features, layout, error boundary)
 - Integration tests for key user flows
 - Achieve minimum 80% code coverage
+- Use `renderWithProviders` helper for components needing context
+- Mock external dependencies with MSW for API calls
+
+### Export Convention
+- All components: `export default ComponentName` at the bottom of each file
+- Barrel files (`index.ts`): `export { default as ComponentName } from './ComponentName'` and `export { default } from './ComponentName'`
+- Named exports for sub-components (e.g., `CardHeader`, `CardBody`) alongside the default export
+
+### Component Convention
+- **Functional components only** — no class components anywhere in the codebase
+- Error boundaries use the `react-error-boundary` library or a wrapper around `ErrorBoundary` from React's API with a functional fallback component
 
 ---
 
