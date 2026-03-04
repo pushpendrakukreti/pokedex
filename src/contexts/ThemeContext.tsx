@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { createContext, useState, useEffect, useCallback, useMemo, type ReactNode } from 'react'
 import { Theme } from '../types/enums'
 import { getStorageItem, setStorageItem } from '../lib/storage'

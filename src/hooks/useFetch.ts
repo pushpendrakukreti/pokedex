@@ -82,6 +82,7 @@ export function useFetch<T>(
   // Execute on mount if immediate is true
   useEffect(() => {
     if (immediate) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- Valid pattern for immediate data fetching on mount
       execute()
     }
   }, [immediate, execute])

@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { createContext, useState, useCallback, useEffect, type ReactNode } from 'react'
 import { NotificationType } from '../types/enums'
 import type { Notification } from '../lib/notification'

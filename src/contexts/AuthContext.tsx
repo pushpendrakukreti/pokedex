@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { createContext, useState, useCallback, useEffect, type ReactNode } from 'react'
 import type { AuthContextValue, AuthState, User, LoginCredentials, RegisterCredentials, AuthTokens } from '../types/auth'
 import { getStorageItem, setStorageItem, removeStorageItem } from '../lib/storage'
